@@ -1,0 +1,5 @@
+cfssl*
+*.tgz
+*.tar.gz
+dashboard.kubeconfig
+.vagrant/
