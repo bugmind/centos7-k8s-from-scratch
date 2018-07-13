@@ -6,13 +6,19 @@
 
 ## usage
 1. 下载repo内容
-   `$ git clone https://github.com/yaxu666/centos7-k8s-from-scratch.git`
+   ```
+   $ git clone https://github.com/yaxu666/centos7-k8s-from-scratch.git
+   ```
 
 2. 下载需要的软件包，注意你需要保证着里面的所有软件都完整下载，尤其最后k8s的client和server两个包
-	 `$ chmod +x download.sh && ./download.sh`
+	 ```
+	 $ chmod +x download.sh && ./download.sh
+	 ```
 
 3. 启动VMs，等待自动完成注意最后是不是成功执行
-   `$ vagrant up`
+   ```
+   $ vagrant up
+   ```
 
 4. 拷贝kubeconfig文件和查看dashboard(root密码默认是`vagrant`)
    ```
