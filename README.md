@@ -32,4 +32,5 @@
 	 浏览器访问`https://172.27.129.105:8994`，（端口即上一步查看到的servie映射端口)，选用dashboard.kubeconfig文件登陆
 
 ## 其他
-目前还存在一点问题，在对pod使用`kubectl logs`和`kubectl exec`两个命令时会出现[问题](https://github.com/opsnull/follow-me-install-kubernetes-cluster/issues/278)，有兴趣弄明白的大哥分享一下。
+~目前还存在一点问题，在对pod使用`kubectl logs`和`kubectl exec`两个命令时会出现[问题](https://github.com/opsnull/follow-me-install-kubernetes-cluster/issues/278)，有兴趣弄明白的大哥分享一下~
+原因在此：[kubernetes/kubernetes#65939](https://github.com/kubernetes/kubernetes/issues/65939)
