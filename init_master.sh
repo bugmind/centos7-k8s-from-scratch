@@ -141,9 +141,6 @@ EOF
 scp kube-apiserver.service root@${MASTER_IP}:/etc/systemd/system/
 ssh root@${MASTER_IP} "mkdir -p /var/log/kubernetes && chown -R k8s /var/log/kubernetes"
 
-# 在执行 kubectl exec、run、logs 等命令时，apiserver 会转发到 kubelet。这里定义 RBAC 规则，授权 apiserver 调用 kubelet API。
-kubectl create clusterrolebinding kube-apiserver:kubelet-apis --clusterrole=system:kubelet-api-admin --user kubernetes
-
 ssh root@${MASTER_IP} "systemctl daemon-reload && systemctl enable kube-apiserver && systemctl restart kube-apiserver"
 ssh root@${MASTER_IP} "systemctl status kube-apiserver |grep 'Active:'"
 

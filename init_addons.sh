@@ -74,3 +74,6 @@ subjects:
   namespace: kube-system
 EOF
 kubectl create -f heapster-1.5.3/deploy/kube-config/rbac/
+
+# 在执行 kubectl exec、run、logs 等命令时，apiserver 会转发到 kubelet。这里定义 RBAC 规则，授权 apiserver 调用 kubelet API。
+kubectl create clusterrolebinding kube-apiserver:kubelet-apis --clusterrole=system:kubelet-api-admin --user kubernetes
